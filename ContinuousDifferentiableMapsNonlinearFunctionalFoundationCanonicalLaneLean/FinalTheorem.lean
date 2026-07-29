@@ -1,0 +1,17 @@
+import canonicalLaneMathlib.AdmissibleClass
+import HautevilleHouse.ContinuousDifferentiableMapsNonlinearFunctionalFoundationCanonicalLaneLean.ContinuousDifferentiableMapsFoundation
+import HautevilleHouse.ContinuousDifferentiableMapsNonlinearFunctionalFoundationCanonicalLaneLean.InverseFunctionTheorem
+import HautevilleHouse.ContinuousDifferentiableMapsNonlinearFunctionalFoundationCanonicalLaneLean.ImplicitFunctionTheorem
+
+namespace HautevilleHouse
+namespace ContinuousDifferentiableMapsNonlinearFunctionalFoundationCanonicalLaneLean
+
+def ConstrainedNonlinearFunctionalClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_nonlinear_functional_endgame (A : AdmissibleClass) :
+    ConstrainedNonlinearFunctionalClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end ContinuousDifferentiableMapsNonlinearFunctionalFoundationCanonicalLaneLean
+end HautevilleHouse
